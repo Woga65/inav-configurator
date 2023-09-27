@@ -84,9 +84,10 @@ TABS.receiver.initialize = function (callback) {
             TARGET.isVariablePitch  // woga65: RC_MAP.length might be 4 if target is SITL, so make sure, heli mode is viable in simulator
         ) {
             rcMapElement.innerHTML = MIXER_CONFIG.platformType == PLATFORM_HELICOPTER
-                ? ` <option value="AECR12TG">Default</option>
-                    <option value="CAER12TG">Collective Pitch / Spektrum</option>
-                    <option value="AECR12TG">Collective Pitch / Futaba</option>`.trim()
+                ? ` <option value="CAER1TG4">Default</option>
+                    <option value="TAERCG14">Collective Pitch / Spektrum</option>
+                    <option value="AETRGC14">Collective Pitch / Futaba</option>
+                    <option value="CAER1TG4">Collective Pitch / ELRS</option>`.trim()
                 : ` <option value="AETR1234">Default</option>
                     <option value="TAER1234">JR / Spektrum / Graupner</option>
                     <option value="AETR1234">Futaba / Hitec</option>`.trim();                    
@@ -149,9 +150,9 @@ TABS.receiver.initialize = function (callback) {
                 chrome.i18n.getMessage('controlAxisYaw'),
                 chrome.i18n.getMessage('controlAxisThrottle'),
                 'Aux 1 [1]',
-                'Aux 2 [2]',
-                TARGET.isVariablePitch ? chrome.i18n.getMessage('controlAxisCollective') : 'Aux 3 [3]',
-                TARGET.isVariablePitch ? chrome.i18n.getMessage('controlGyroGain') : 'Aux 4 [4]',
+                TARGET.isVariablePitch ? chrome.i18n.getMessage('controlAxisCollective') : 'Aux 2 [2]',
+                TARGET.isVariablePitch ? chrome.i18n.getMessage('controlGyroGain') : 'Aux 3 [3]',
+                'Aux 4 [4]',
             ],
             bar_container = $('.tab-receiver .bars');
 
