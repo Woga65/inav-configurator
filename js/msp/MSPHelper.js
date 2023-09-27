@@ -1297,8 +1297,8 @@ var mspHelper = (function (gui) {
                 NAV_POSHOLD.hoverThrottle = data.getUint16(11, true);
                 if (TARGET.isVariablePitch) {     //woga65: get helicopter hover values per headspeed
                     NAV_POSHOLD.hoverCollectiveNormal  = data.getUint16(13, true);
-                    NAV_POSHOLD.hoverCollectiveIdelUp1 = data.getUint16(13, true);
-                    NAV_POSHOLD.hoverCollectiveIdelUp2 = data.getUint16(15, true);
+                    NAV_POSHOLD.hoverCollectiveIdelUp1 = data.getUint16(15, true);
+                    NAV_POSHOLD.hoverCollectiveIdelUp2 = data.getUint16(17, true);
                 }
                 break;
 
