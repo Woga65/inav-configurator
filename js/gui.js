@@ -428,5 +428,6 @@ GUI_control.prototype.selectAdvancedTuningGenericPlatform = function () {
     $('.non-collective').show();
     $('.collective').hide();
 }
+
 // initialize object into GUI variable
 var GUI = new GUI_control();

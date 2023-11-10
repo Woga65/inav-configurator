@@ -22,8 +22,7 @@ TABS.advanced_tuning.initialize = function (callback) {
         }
         else if (FC.isHelicopter()) {
             GUI.selectAdvancedTuningHelicopter();
-        }
-        else {
+        } else {
             GUI.selectAdvancedTuningGenericPlatform();
         }
 
